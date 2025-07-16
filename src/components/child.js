@@ -1,16 +1,16 @@
 import React from 'react'
 
-const child = ({change}) => {
+const Child = ({change}) => {
     function handler(e){
         let x=e.target.value
         change(x)
     }
   return (
-    <div style={{display:"flex",flexDirection:'column',gap:"50px",backgroundColor:"red",height:"70%",width:"100%"}}>
+    <div style={{display:"flex",flexDirection:'column',gap:"50px",backgroundColor:"red",height:"50%",width:"80%",}}>
        <h2>Child Component</h2>
-        <input type="text" onChange={handler} />
+        <input type="text" onChange={handler} style={{width:"30%",height:"50px"}}/>
     </div>
   )
 }
 
-export default child
+export default Child

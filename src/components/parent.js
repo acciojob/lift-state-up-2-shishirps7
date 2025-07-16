@@ -1,15 +1,15 @@
 import React,{useState} from 'react'
-import child from './child'
+import Child from './child'
 
-const parent = () => {
- const [input,setInput]=useState(0)
+const Parent = () => {
+ const [input,setInput]=useState("")
   return (
-    <div style={{display:"flex",flexDirection:'column',gap:"50px",backgroundColor:"red",height:"500px",width:"800px"}}>
+    <div style={{display:"flex",flexDirection:'column',backgroundColor:"green",height:"500px",width:"800px",padding:"30px"}}>
         <h1>Parent Component</h1>
-        {input}
-        <child change={setInput}/>
+        <div style={{height:"50px",display:"flex",alignItems:"flex-end"}}>{input}</div>
+        <Child change={setInput}/>
     </div>
   )
 }
 
-export default parent
+export default Parent
